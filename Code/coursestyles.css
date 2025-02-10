@@ -1,0 +1,184 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0f7fa;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #ffffff, #00838f); /* Gradient background */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-bottom: 2px solid #00bcd4; /* Border for separation */
+}
+
+/* Back Button */
+/* Back Button */
+.back-btn {
+    background: linear-gradient(135deg, #00bcd4, #00838f); /* Gradient background matching the theme */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px; /* Fully rounded button */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the icon and text */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #00838f, #00acc1); /* Hover with reversed gradient */
+    transform: scale(1.05); /* Slight scale effect for interactivity */
+}
+
+.back-btn:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.back-btn .btn-icon {
+    font-size: 20px; /* Icon size */
+}
+
+/* Optional: If you want to add an icon before the text, e.g., a left arrow, you can use: */
+.back-btn .btn-icon::before {
+    content: '←'; /* Left arrow character */
+}
+
+
+/* Logo Image */
+.logo img {
+    width: 60px; /* Slightly larger logo for better prominence */
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    padding-right: 50%;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Course Content Styles */
+.course-content {
+    max-width: 1000px;
+    margin: 120px auto 20px;
+    padding: 20px;
+}
+
+/* Chapter Section */
+.chapter {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #00acc1;
+}
+
+.chapter h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Chapter Content - Flexbox Layout */
+.chapter-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.notes, .video-section {
+    flex: 1;
+    padding: 15px;
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* Adding some gap between content */
+}
+
+.notes h3, .video-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Button Styling for "Mark as Read" */
+.done-btn {
+    background: linear-gradient(135deg, #00acc1, #00838f);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px; /* Added space to give better alignment with content */
+}
+
+/* Hover effect for "Mark as Read" Button */
+.done-btn:hover {
+    background: linear-gradient(135deg, #00bcd4, #00838f); /* Hover color similar to the page theme */
+}
+
+/* Completed Button Style (shows tick when clicked) */
+.done-btn.completed {
+    background: #4caf50;
+    color: #ffffff;
+}
+
+.done-btn.completed .btn-icon {
+    display: inline; /* Show checkmark on completion */
+}
+
+.done-btn .btn-icon {
+    display: none; /* Initially hidden */
+}
+
+/* Video Styling */
+.video-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .chapter-content {
+        flex-direction: column;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 40px; /* Adjust the logo size on smaller screens */
+    }
+
+    .back-btn {
+        font-size: 16px;
+    }
+}

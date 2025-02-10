@@ -1,0 +1,173 @@
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e0f7fa;
+  }
+  
+  /* Container to wrap sidebar and main content */
+  .container {
+    display: flex;
+    margin-top: 80px; /* Adjust for fixed header */
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #ffffff, #00838f);
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    border-right: 3px solid #00bcd4;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  .sidebar h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 10px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar ul li a:hover {
+    background: #00bcd4;
+    color: #ffffff;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    background: linear-gradient(135deg, #00bcd4, #00838f); /* Matching theme */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px; /* Fully rounded button */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the icon and text */
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto 10px;
+    width: fit-content; /* Adjusts to content width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-btn:hover {
+    background: linear-gradient(135deg, #00838f, #00acc1);
+    transform: scale(1.05); /* Slight scale effect */
+  }
+  
+  /* Back button icon */
+  .back-btn .btn-icon {
+    font-size: 20px;
+  }
+  
+  /* Main Content Styles */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  .content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .content header h1 {
+    font-size: 32px;
+    color: #333;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .download-btn {
+    background: linear-gradient(135deg, #00bcd4, #00838f);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .download-btn:hover {
+    background: linear-gradient(135deg, #00838f, #00acc1);
+    transform: scale(1.05);
+  }
+  
+  /* Article Content Styling */
+  article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #00acc1;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+  
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+  
+    .content {
+        padding: 15px;
+    }
+  
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+  
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+  }
+  

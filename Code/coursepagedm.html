@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Access Page</title>
+    <link rel="stylesheet" href="coursestyles.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+    <h1 style="color: black;"><b>DIGITAL MARKETING</b></h1>
+    <!-- Logo Image on the right -->
+    <div class="logo">
+        <img src="logoright.png" alt="right learning logo">
+    </div>
+</header>
+
+<main class="course-content">
+    <section class="chapter">
+        <h2>Chapter 1: Introduction</h2>
+        <div class="chapter-content">
+            <div class="notes">
+                <h3>Notes</h3>
+                <p>Chapter 1 notes content goes here. This section contains the essential concepts and explanations for the chapter.</p>
+                <a href="notesdm.html">Learn more</a>
+                <button class="done-btn" onclick="toggleRead(this)">Mark as Read</button>
+            </div>
+            <div class="video-section">
+                <h3>Video</h3>
+                <video controls>
+                    <source src="videodm1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="done-btn" onclick="toggleRead(this)">Mark as Read</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="chapter">
+        <h2>Chapter 2: Advanced Topics</h2>
+        <div class="chapter-content">
+            <div class="notes">
+                <h3>Notes</h3>
+                <p>Chapter 2 notes content goes here. This section contains more in-depth explanations and examples.</p>
+                <button class="done-btn" onclick="toggleRead(this)">Mark as Read</button>
+            </div>
+            <div class="video-section">
+                <h3>Video</h3>
+                <video controls>
+                    <source src="videodm2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="done-btn" onclick="toggleRead(this)">Mark as Read</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- JavaScript for toggling "Mark as Read" -->
+<script>
+    function toggleRead(button) {
+        const done = button.classList.toggle("completed");
+        button.innerHTML = done ? '✓ Read' : 'Mark as Read';
+    }
+</script>
+
+</body>
+</html>
